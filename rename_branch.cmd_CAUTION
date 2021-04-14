@@ -1,0 +1,27 @@
+@rem https://stackoverflow.com/a/30590238
+
+@setlocal
+
+@set old_name=main
+@set new_name=master
+
+@REM  Rename the local branch to the new name
+git branch -m %old_name% %new_name%
+
+@REM  Delete the old branch on remote - where <remote> is, for example, origin
+git push origin --delete %old_name%
+
+@REM  Or shorter way to delete remote branch [:]
+@REM git push origin :%old_name%
+
+@REM  Prevent git from using the old name when pushing in the next step.
+@REM  Otherwise, git will use the old upstream name instead of %new_name%.
+git branch --unset-upstream %old_name%
+
+@REM  Push the new branch to remote
+git push origin %new_name%
+
+@REM  Reset the upstream branch for the new_name local branch
+git push origin -u %new_name%
+
+@endlocal

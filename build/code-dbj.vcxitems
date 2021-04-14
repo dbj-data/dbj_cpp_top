@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{98a4b3cc-2a84-42b6-8ca5-7bd14b598031}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\dbj_buffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\dbj_common.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\dbj_compiletime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\dbj_debug.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\dbj_defer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\dbj_heap_alloc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\dbj_nano_synchro.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\dbj_typename.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\dbj_ustrings.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\dbj_valstat.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\dbj_windows_include.h" />
+  </ItemGroup>
+</Project>
