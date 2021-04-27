@@ -1,6 +1,6 @@
 #pragma once
 /*
-   (c) 2019-2020 by dbj.org   -- LICENSE DBJ -- https://dbj.org/license_dbj/
+   (c) 2019-2021 by dbj.org   -- LICENSE DBJ -- https://dbj.org/license_dbj/
 */
 
 #ifdef __STDC_ALLOC_LIB__
