@@ -36,20 +36,8 @@ Do you really think you can beat std::string in that scenario?
 #include <vector>
 #include <time.h>
 
-#define VT_ESC "\x1b["
-#define VT_RESET VT_ESC "0m"
-#define VT_GRAY VT_ESC "90m"
-#define VT_BLUE VT_ESC "94m"
-#define VT_CYAN VT_ESC "36m"
-#define VT_YELLOW VT_ESC "33m"
-#define VT_GREEN VT_ESC "32m"
-#define VT_RED VT_ESC "31m"
-#define VT_MAGENTA VT_ESC "35m"
-
-
 #define DBJ_ASSERT assert
 #define DBJ_REPEAT(N) for (size_t dbj_repeat_counter_ = 0; dbj_repeat_counter_ < static_cast<size_t>(N); ++dbj_repeat_counter_)
-
 
 #define DBJ_CALLOC(T_, S_) (T_*)calloc(S_, sizeof(T_))
 #define DBJ_FREE(P_) free(P_)
@@ -229,6 +217,16 @@ Start here: https://stackoverflow.com/a/3279550
 
 #define DBJSTRING_TEST
 #ifdef DBJSTRING_TEST
+
+#define VT_ESC "\x1b["
+#define VT_RESET VT_ESC "0m"
+#define VT_GRAY VT_ESC "90m"
+#define VT_BLUE VT_ESC "94m"
+#define VT_CYAN VT_ESC "36m"
+#define VT_YELLOW VT_ESC "33m"
+#define VT_GREEN VT_ESC "32m"
+#define VT_RED VT_ESC "31m"
+#define VT_MAGENTA VT_ESC "35m"
 
 #ifndef _WIN32
 
