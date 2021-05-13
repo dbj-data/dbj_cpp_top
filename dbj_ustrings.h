@@ -1,7 +1,7 @@
 #ifndef DBJ_USTRINGS_INC
 #define DBJ_USTRINGS_INC
 // demo and benchmarking
-// https://godbolt.org/z/PsKT19
+//https://godbolt.org/z/Eq9766Moe
 
 /*
  (c) 2020 by dbj@dbj.org -- https://dbj.org/license_dbj
