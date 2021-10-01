@@ -8,7 +8,10 @@ this is C++ code
 */
 #include "dbj_utf_conversions.h"
 
+#ifdef __cplusplus 
 namespace dbj::utf {
+    extern "C" {
+#endif // __cplusplus 
 
 #ifdef __cpp_char8_t
 	// C++20 or modern compiler C++17
@@ -139,7 +142,11 @@ namespace dbj::utf {
 
         return 0;
     }
-} // dbj::utf
+
+#ifdef __cplusplus 
+} //    extern "C" 
+} // namespace dbj::utf 
+#endif // __cplusplus 
 
 #endif // !DBJ_UTF_UTILS_INC
 

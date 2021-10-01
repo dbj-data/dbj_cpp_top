@@ -1,3 +1,6 @@
+#ifndef DBJ_STRNG_INC
+#define DBJ_STRNG_INC
+
 // -std=c++17 -fno-exceptions -fno-rtti
 /*
 https://godbolt.org/z/hczjYz
@@ -13,16 +16,17 @@ LARGE std::string     		0.009 sec,  9 dbj's
 LARGE std::vector<char>  	0.013 sec,  13 dbj's
 
 Basically this is bollocks ... dbj::strng is desperately slow
-and not very functional
-This is left in as a monument to vanity 
+and not very functional. This is left in as a monument to vanity 
 
 If you need a string just use std::string, of course always build 
 with no exceptions and no RTTI ...
 Do you really think you can beat std::string in that scenario?
 */
 
-#ifndef DBJ_STRNG_INC
-#define DBJ_STRNG_INC
+
+#ifdef __clang__
+#pragma clang system_header
+#endif // __clang__
 
 #include <assert.h>
 #include <stdio.h>

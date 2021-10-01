@@ -2,6 +2,10 @@
 #ifndef DBJ_SEQUENCE_PRINT_INC
 #define DBJ_SEQUENCE_PRINT_INC
 
+#ifdef __clang__
+#pragma clang system_header
+#endif // __clang__
+
 /// #include <iostream>
 #include <array>
 #include <cassert>

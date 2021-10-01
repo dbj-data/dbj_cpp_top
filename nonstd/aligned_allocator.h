@@ -1,6 +1,8 @@
 #ifndef DBJ_ALIGNED_ALLOCATOR_INC_
 #define DBJ_ALIGNED_ALLOCATOR_INC_
-
+#ifdef __clang__
+#pragma clang system_header
+#endif // __clang__
 // #ifdef _WIN32
 #include <malloc.h>
 // #endif
