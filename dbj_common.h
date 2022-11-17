@@ -377,4 +377,43 @@ constexpr bool wis_empty(const wchar_t* text) noexcept
 
 DBJ_NSPACE_END
 
+/*
+this is C actually
+*/
+#include <stdio.h>
+
+#define DBJ_FOR(X,Y) for( typeof(Y) X = 0; X < Y; ++X )
+
+#define DBJ_COUNT(counter_, X,Y) for( typeof(Y) counter_ = X; !(counter_ > Y); counter_++ )
+
+/*
+usage:
+
+int main(const int argc, const char * argv[argc]) {
+
+    printf("\n\n");
+    COUNT(j,3,9)
+        printf("%d\t", j);
+
+    printf("\n\n");
+    COUNT(l,3.2,9.4)
+        printf("%.2f\t", l);
+
+    printf("\n\n");
+    COUNT(c,'b','h')
+        printf("%c\t", c);
+
+    printf("\n\n");
+    FOR(j,9)
+        printf("%3d", j);
+
+    printf("\n\n");
+    int k =13;
+    FOR(j,k)
+        printf("%3d", j);
+
+    constexpr int retval = 42;
+    return retval;
+}
+*/
 #endif // DBJ_COMMON_INC
