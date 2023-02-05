@@ -1,5 +1,7 @@
 <h1 style="font-size:64px;"> WIP </h1>
 
+Primary usage of this repo is as a submodule to my [MACHINE_WIDE](https://github.com/dbj-data/machine_wide) repo.
+
 <h1> DBJ CPP TOP </h1>
 
 *In IT systems in general, the programming language is not of primary importance. Architecture is.*
